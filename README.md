@@ -1,22 +1,12 @@
 # Agentic Workflows
 Agentic workflows that can be applied across various projects.
 
-## step_N.md
-### v1 format
-```
-<name>
-<description>
-<resources>
-<definition_of_done>
-<how>
-<fallbacks>
-```
-**name**: how this step it's called at the flow
+## Ways of work
 
-**description**: why this step has been implemented and what it handles in the process
+### commit
+Run `/commit` (optionally with a hint for the message, e.g. `/commit mention the new template`) to create a commit following the rules.
 
-**resources**: what it does use to work e.g. skills, hooks, external files
-
-**definition_of_done**: what should be fulfilled/reached so its works it's done
-
-**fallbacks**: what should happen in the flow if something fails in this step
+- **Stage your changes before running the command.**
+- A commit plan (staged files and full message) is shown first; nothing is committed until you approve it.
+- Git hooks are never skipped and commits are never amended unless asked.
+- The message format comes from `templates/commit.md`.
